@@ -8,9 +8,9 @@ services:
   nexus:
     restart: always
     container_name: nexus
-    image: sonatype/nexus3
+    image: docker.io/sonatype/nexus3:latest
     volumes:
-      - data/nexus/data:/sonatype-work:z
+      - /data/nexus/data:/sonatype-work:z
     ports:
       - "8081:8081"
     environment:
